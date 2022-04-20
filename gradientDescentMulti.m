@@ -18,7 +18,11 @@ for iter = 1:num_iters
     %
 
 
+theta1=theta(1)-alpha*(sum((X*theta-y))/m)
+theta2=theta(2)-alpha*((sum(((X*theta)-y).*X(:,2)))/m)
+theta3=theta(3)-alpha*((sum(((X*theta)-y).*X(:,3)))/m)
 
+theta=[theta1;theta2;theta3]
 
 
 
