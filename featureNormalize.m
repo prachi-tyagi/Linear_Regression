@@ -25,11 +25,16 @@ sigma = zeros(1, size(X, 2));
 %
 % Hint: You might find the 'mean' and 'std' functions useful.
 %       
+mu1=(mean(X(:,1)))
+sigma1=std(X(:,1))
+mu2=(mean(X(:,2)))
+sigma2=std(X(:,2))
+X(:,1)=(X(:,1)-mu1)/(sigma1)
+X(:,2)=(X(:,2)-mu2)/(sigma2)
 
-
-
-
-
+mu=[mu1,mu2]
+sigma=[sigma1,sigma2]
+X_norm=[X(:,1),X(:,2)]
 
 
 
